@@ -73,6 +73,7 @@ This project aims to build a predictive model that identifies whether a loan app
 ----
 
 **## 👤 Contacts**
+
 Email: (7mishragaurav@gmail.com)
 LinkedIn: (www.linkedin.com/in/gaurav-mishra-3788ba271)
 Github: (https://github.com/mishragaurav7)
