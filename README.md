@@ -6,14 +6,16 @@ This project aims to build a predictive model that identifies whether a loan app
 ---
 
 ## 📁 Dataset
-- **File**: `loan_data.csv`
-- **Features**:
+- **Records**: 1000
+- **Features Used**:
   - `credit_score`
   - `loan_amount`
   - `income`
   - `employment_length`
   - `debt_to_income`
-  - `loan_status` (Target: `0 = Low Risk`, `1 = High Risk`)
+- **Target Variable**: `loan_status`
+  - `0` = Low Risk (likely to repay)
+  - `1` = High Risk (likely to default)
 
 ---
 
@@ -27,6 +29,8 @@ This project aims to build a predictive model that identifies whether a loan app
 
   - Correlation heatmap
 <img width="523" height="331" alt="Correlation_heatmap" src="https://github.com/user-attachments/assets/d5d43683-3cb4-4e4d-ab8d-dcc20ad08192" />
+
+- Identified a significant **class imbalance** (≈3:1 in favor of high-risk loans).
 
 - **Modeling Techniques**
   - Logistic Regression
@@ -47,22 +51,22 @@ This project aims to build a predictive model that identifies whether a loan app
 | Logistic (Balanced)       | 0.49     | 0.46              | 0.50               |
 | Random Forest (Balanced)  | 0.72     | 0.08              | 0.95               |
 
-- Logistic Regression defaulted to predicting only high-risk due to class imbalance.
-- Class balancing improved fairness but lowered total accuracy.
-- Random Forest achieved a better balance and high recall for high-risk cases.
+ 🟡 **Observation**:  
+- The baseline model failed to predict low-risk loans due to imbalance.
+- Class balancing improved fairness but lowered overall accuracy.  
+- Random Forest handled imbalance better, achieving high recall for risky loans.
 
 ---
 
 ## 💡 Insights
-- Class imbalance can severely distort model fairness and accuracy.
-- Logistic Regression struggles with imbalance unless adjusted.
-- Random Forest improves predictive power, especially on skewed data.
-- Future improvements include using synthetic oversampling (SMOTE) and gradient boosting models like XGBoost.
+- **Data imbalance** significantly impacts model reliability and fairness.
+- Logistic Regression needs balancing strategies to function well on skewed datasets.
+- **Random Forest** offers better performance in identifying risky borrowers.
+- Evaluating with **recall and precision** (not just accuracy) is essential for real-world credit risk applications.
 
----
+---- 
 
 ## 📦 Requirements
-- Python 3.7+
 - Libraries:
   - pandas
   - numpy
