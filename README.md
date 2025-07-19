@@ -23,6 +23,7 @@ This project aims to build a predictive model that identifies whether a loan app
 - **Data Preprocessing**
   - Checked for missing values (none found)
   - Scaled features using `StandardScaler`
+    
 - **Exploratory Data Analysis**
   - Target class distribution visualization
 <img width="293" height="194" alt="Loan_Status_Distribution" src="https://github.com/user-attachments/assets/3b68d004-8fc2-4402-b587-c046ead2514c" />
